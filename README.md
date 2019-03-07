@@ -8,3 +8,13 @@ C#, VB.Net, ASP.Net, .NET Core
 2. Whilst at home - work of developHome branch
 3. Once projects are completed pull from either 1 or 2 into develop branch
 4. Once testing is completed on project in develop branch, pull into master branch
+
+#Projects
+1. TraceListenerLogger_CS
+	* Log the results of traces to a file. 
+	* Includes Exception logging, etc. 
+2.	ThreadSafeApplication1_CS
+	* Multithreading (THREADSAFE) Application using the AUTORESETEVENT listener
+3. threadedApplication [C#]
+	* Multithreading (THREADSAFE) Application using Invoke and Delegate and BackgroundWorker
+	* Thread safe calls to WindowsForm Controls
