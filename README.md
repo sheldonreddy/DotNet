@@ -18,3 +18,6 @@ C#, VB.Net, ASP.Net, .NET Core
 3. threadedApplication [C#]
 	* Multithreading (THREADSAFE) Application using Invoke and Delegate and BackgroundWorker
 	* Thread safe calls to WindowsForm Controls
+4. windowsService [C#]
+	* This project implements a basic WindowsService which, one started via the Services Settings, logs a timestamp every 5 seconds. 
+	
