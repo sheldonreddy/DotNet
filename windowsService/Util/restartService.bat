@@ -1,0 +1,2 @@
+net stop SheldonWinService
+net start SheldonWinService
