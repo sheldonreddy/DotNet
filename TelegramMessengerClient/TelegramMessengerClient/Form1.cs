@@ -49,10 +49,10 @@ namespace TelegramMessengerClient
         #region Globals
         private TelegramClient client;
         // Change these values to your own custom values obtained from https://my.telegram.org/apps
-        private int apiId = 0;
-        private string apiHash = "";
-        private string destNumber = "27829410963";
-        private string sourceNumber = "+27739993081";
+        private int apiId = 963585;
+        private string apiHash = "6d6925c728ef9e4f3bdaf8526131ec9c";
+        private string destNumber = "27739993081";
+        private string sourceNumber = "+27829410963";
         #endregion
 
         public Form1()
@@ -102,7 +102,7 @@ namespace TelegramMessengerClient
 
                 // Check your phone for the Code Sent by Telegram, 
                 // Enter it below, Remove the debug breakpoint and re-run
-                var code = "48097";
+                var code = "79596";
 
                 var user = await client.MakeAuthAsync(sourceNumber, hash, code);
 
