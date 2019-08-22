@@ -164,23 +164,21 @@ namespace TelegramMessengerClient
         {
             try
             {
-
-                var ret = await client.GetUserDialogsAsync();
-
-                // NB. The following TLDIAGLOSLICE Casting doesn't work so I manually browsed the ret for the chat.ID and AccessHash values
-                //get user dialogs
-                //var dialogs = (TLDialogsSlice)await client.GetUserDialogsAsync();
+                // Nb. The documentation says you should use:
+                //      var dialogs = (TLDialogs)await client.GetUserDialogsAsync();
+                // but As Per the GitHub Issue Fix, you should use the following line:
+                var dialogs = await client.GetUserDialogsAsync() as TLDialogs;
 
                 //find channel by title
-                //var chat = dialogs.Chats
-                //  .Where(c => c.GetType() == typeof(TLChannel))
-                //  .Cast<TLChannel>()
-                //  .FirstOrDefault(c => c.Title == "DIGNOSTM");
+                var chat = dialogs.Chats
+                  .Where(c => c.GetType() == typeof(TLChannel))
+                  .Cast<TLChannel>()
+                  .FirstOrDefault(c => c.Title == "DIGNOSTM_MPCDEV");
 
-                // Send message
-                // BEFORE PROCEEDING - Add a watch to "ret" above and manually inspect the chat.Id and AccessHash fields for your desired Channel and add it below.
-                // Then remove breakpoint and re-run.
-                await client.SendMessageAsync(new TLInputPeerChannel() { ChannelId = 00000/*chat.Id*/, AccessHash = 000000 /*chat.AccessHash.Value*/ }, "Hello World!");
+
+                await client.SendMessageAsync(new TLInputPeerChannel() { ChannelId = chat.Id, AccessHash = chat.AccessHash.Value }, "Hello World!");
+
+
                 listBox1.Items.Add("Message Sent to: " + "XXXXX Channel");
                 
             }

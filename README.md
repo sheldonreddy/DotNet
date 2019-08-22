@@ -21,3 +21,7 @@ C#, VB.Net, ASP.Net, .NET Core
 4. windowsService [C#]
 	* This project implements a basic WindowsService which, one started via the Services Settings, logs a timestamp every 5 seconds. 
 	
+5. TelegramMessengerClient_RequestAuthCode [C#]
+	* This GUI is used to request an Authentication Code for a specific Telegram User Cell Number.
+	* The Authentication Code can be used as input to the TelegramMessengerClient in it's AppConfig File. 
+	
