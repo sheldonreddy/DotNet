@@ -7,13 +7,19 @@ using System.Threading.Tasks;
 // Add EASendMail namespace
 using EASendMail;
 
-/*
- * README. 
+/*README
  *      You must turn-on the setting on your GMAIL account to allow less secure apps to access your GMAIL Account (the sender)
+
+ * Dependencies: Nuget> Install-Package EASendMail
  * 
- */ 
-
-
+ * Check Nuget Output to find the path for "Adding package 'EASendMail.7.5.0.2' to folder"
+ * Add a reference to the relevant dll from the above path depending on what .NET Framework you are using. Each folder will cover its version and all future versions. 
+ * 
+ * Comments: Super easy to use and works well
+ * 
+ * Tutorial Resource: https://www.emailarchitect.net/easendmail/ex/c/4.aspx
+ * 
+ */
 
 
 namespace GmailMessengerClient
